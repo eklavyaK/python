@@ -1,24 +1,20 @@
 import sys
-input = lambda: sys.stdin.buffer.readline().decode().rstrip()
-
-
 
 
 
 
 def code(TC):
-	n, k = list(map(int, input().split()))
+	n = int(input())
 	a = list(map(int, input().split()))
-	for i in a:
-		if i % k == 0: print(i / k, end = " ")
-
-
-
+	dic = {}
+	for i in range(n):
+		if a[i] not in dic:
+			dic[a[i]] = 1;
+	print(len(dic))
 
 
 
 
 TT = 1
-TT = int(input())
-for i in range(1, TT + 1, 1):
-	code(i)
+for TC in range(1, TT + 1, 1):
+	code(TC)
